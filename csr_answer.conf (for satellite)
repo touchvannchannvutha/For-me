@@ -1,0 +1,32 @@
+[ req_distinguished_name ]
+countryName	= Country Name (2 letter code)
+countryName_default	= KH
+countryName_min	= 2
+countryName_max	= 2
+stateOrProvinceName	= State or Province Name (full name)
+stateOrProvinceName_default	= PP
+localityName	= Locality Name (eg, city)
+localityName_default	= PP
+
+0.organizationName	= Organization Name (eg, company)
+0.organizationName_default	= bg
+organizationalUnitName	= Organizational Unit Name (eg, section)
+
+organizationalUnitName_default	= admin
+commonName	= Common Name (eg, your name or your server's hostname)
+
+commonName_default	= satellite.bg.demo
+commonName_max	= 64
+
+[ req_ext ]
+subjectAltName	= @alt_names
+extendedKeyUsage	=critical, clientAuth, serverAuth, codeSigning, emailProtection
+keyUsage	=digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+
+[alt_names]
+DNS.1	= satellite.bg.demo
+IP.1	= 172.20.62.10
+DNS.2	= capsule.bg.demo
+IP.2	= 172.20.62.20
+
+
